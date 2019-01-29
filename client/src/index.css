@@ -6,9 +6,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*background-image: url("/images/background.jpeg");
+  background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;*/
+  background-size: cover;
+  opacity: 0.5;
 }
 
 code {
