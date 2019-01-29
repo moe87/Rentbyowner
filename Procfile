@@ -1,1 +1,1 @@
-web: heroku-postbuild
+web: node server.js && heroku-postbuild
