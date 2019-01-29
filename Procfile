@@ -1,1 +1,1 @@
-web: node heroku-postbuild
+web: node server.js && yarn heroku-postbuild
