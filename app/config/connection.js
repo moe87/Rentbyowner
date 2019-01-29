@@ -5,19 +5,24 @@
 // Dependencies
 var Sequelize = require("sequelize");
 
-var DB_URI = process.env.JAWSDB_URL ? process.env.JAWSDB_URL:'localhost';
-
-// Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-var sequelize = new Sequelize("zo942eiq1flva3e9", "qse06zg3th635q6k", "x201gkzdiofma1bg", {
-  host: DB_URI,
-  port: 3306,
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  }
-});
+var sequelize;
+if(process.env..JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dailect: "mysql",
+    logging: true
+  });
+} else {
+  sequelize = new Sequelize("rentbyowner", "rentbyowner", "rentbyowner", {
+    host: "localhost",
+    port: 3306,
+    dialect: "mysql",
+    pool: {
+     max: 5,
+     min: 0,
+     idle: 10000
+    }
+  });
+}
 
 // Exports the connection for other files to use
 module.exports = sequelize;
