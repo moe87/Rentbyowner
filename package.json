@@ -8,7 +8,7 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "prod": "\"yarn start\" \"yarn client\""
+    "prod": "yarn start && yarn client"
   },
   "keywords": [],
   "author": "",
