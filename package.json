@@ -8,7 +8,7 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "prod": "yarn start && yarn client"
+    "heroku-postbuild": "yarn start && cd client && yarn && yarn run build"
   },
   "keywords": [],
   "author": "",

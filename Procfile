@@ -1,1 +1,1 @@
-web: node server.js && ./client/yarn start
+web: yarn heroku-postbuild
