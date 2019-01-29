@@ -6,7 +6,7 @@
 var Sequelize = require("sequelize");
 
 var sequelize;
-if(process.env..JAWSDB_URL) {
+if(process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL, {
     dailect: "mysql",
     logging: true
